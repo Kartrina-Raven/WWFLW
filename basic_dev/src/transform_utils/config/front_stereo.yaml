@@ -1,0 +1,46 @@
+%YAML:1.0
+---
+front_stereo:
+  left:
+    intrinsics:
+      fx: 831.384
+      fy: 831.384
+      cx: 480.0
+      cy: 360.0
+    extrinsics_to_body:
+      translation:
+        x: 0.175
+        y: 0.150
+        z: 0.0
+      rotation:
+        r00: 0.0
+        r01: 0.0
+        r02: 1.0
+        r10: -1.0
+        r11: 0.0
+        r12: 0.0
+        r20: 0.0
+        r21: -1.0
+        r22: 0.0
+
+  right:
+    intrinsics:
+      fx: 831.384
+      fy: 831.384
+      cx: 480.0
+      cy: 360.0
+    extrinsics_to_body:
+      translation:
+        x: 0.175
+        y: -0.150
+        z: 0.0
+      rotation:
+        r00: 0.0
+        r01: 0.0
+        r02: 1.0
+        r10: -1.0
+        r11: 0.0
+        r12: 0.0
+        r20: 0.0
+        r21: -1.0
+        r22: 0.0

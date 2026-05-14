@@ -1,0 +1,77 @@
+mass        : 0.91
+gra         : 9.81
+hov_percent : 0.148
+full_thrust : 66.0
+ctrl_rate   : 100.0
+
+pxy_error_max: 0.5
+vxy_error_max: 1.0
+pz_error_max: 0.5
+vz_error_max: 1.2
+yaw_error_max: 0.7
+
+use_yaw_rate_ctrl: false
+perform_aerodynamics_compensation: false
+
+hover:
+    use_hov_percent_kf: false
+    percent_lower_limit: 0.00
+    percent_higher_limit: 100000
+
+gain:
+    track:
+        Kp_gain: 1.5
+        thresh: 0.1
+        Kp0: 1.2
+        Kp1: 1.2
+        Kp2: 1.5
+        Kpd0: 0.0
+        Kpd1: 0.0
+        Kpd2: 0.0
+        Kv0: 1.2
+        Kv1: 1.2
+        Kv2: 1.8
+        Kvi0: 0.0
+        Kvi1: 0.0
+        Kvi2: 0.0
+        Kvd0: 0.1
+        Kvd1: 0.1
+        Kvd2: 0.08
+        Ka0: 0.8
+        Ka1: 0.8
+        Ka2: 1.0
+        Kyaw: 3.0
+        Krp: 6.0
+        Kdrp: 0.2
+        Kdyaw: 0.2
+        Kyawd: 6.0
+        Krpd: 8.0
+    hover:
+        Kp0: 1.2
+        Kp1: 1.2
+        Kp2: 1.5
+        Kv0: 1.2
+        Kv1: 1.2
+        Kv2: 1.8
+        Kvi0: 0.0
+        Kvi1: 0.0
+        Kvi2: 0.0
+        Ka0: 0.8
+        Ka1: 0.8
+        Ka2: 1.0
+        Kyaw: 3.0
+
+msg_timeout:
+    odom: 0.5
+    rc:   0.5
+    cmd:  0.5
+    imu:  0.5
+
+pwm_param:
+    C_t: 0.000367717
+    C_M: 4.888486e-6
+    arm_length: 0.18
+    sqrtpwm2rads: 1159.74
+    Ixx: 0.0046890742
+    Iyy: 0.0069312
+    Izz: 0.010421166

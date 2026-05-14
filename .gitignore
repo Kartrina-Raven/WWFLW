@@ -1,0 +1,93 @@
+# =========================
+# ROS / Catkin build files
+# =========================
+basic_dev/build/
+basic_dev/devel/
+basic_dev/install/
+basic_dev/log/
+basic_dev/logs/
+build/
+devel/
+install/
+log/
+logs/
+.catkin_tools/
+
+# Catkin generated files
+*.pyc
+__pycache__/
+*.egg-info/
+
+# =========================
+# CMake / C++ build files
+# =========================
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+*.o
+*.so
+*.a
+*.dll
+*.dylib
+*.exe
+*.out
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# ROS bags / logs / large data
+# =========================
+*.bag
+*.db3
+*.active
+*.ulg
+*.log
+
+# =========================
+# Point cloud / map / sensor data
+# =========================
+*.pcd
+*.ply
+*.bin
+*.las
+*.laz
+
+
+# =========================
+# AirSim / PX4 temporary outputs
+# =========================
+AirSimNH/
+Blocks/
+Saved/
+*.csv
+
+
+# =========================
+# Local config / secrets
+# =========================
+.env
+*.env
+config/local*

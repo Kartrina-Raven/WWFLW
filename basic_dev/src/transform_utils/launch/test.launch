@@ -1,0 +1,51 @@
+<launch>
+  <include file="$(find fast_lio)/launch/mapping_marsim.launch"/>
+  <include file="$(find ego_planner)/launch/single_drone.launch"/>
+    <node pkg="transform_utils"
+          type="door_center_to_world_node"
+          name="door_center_to_world_node"
+          output="screen">
+
+        <!-- 配置文件 -->
+        <param name="config_path" value="$(find transform_utils)/config/front_stereo.yaml"/>
+
+        <!-- 检测类别 -->
+        <param name="target_class" value="door"/>
+        <param name="min_probability" value="0.5"/>
+
+        <!-- 订阅话题 -->
+        <param name="bbox_topic" value="/yolov11/front_left/BoundingBoxes"/>
+        <param name="left_image_topic" value="/airsim_node/drone_1/front_left/Scene"/>
+        <param name="right_image_topic" value="/airsim_node/drone_1/front_right/Scene"/>
+        <param name="odom_topic" value="/eskf_odom"/>
+        <param name="gps_topic" value="/airsim_node/drone_1/gps"/>
+
+        <!-- 发布话题 -->
+        <param name="gate_world_topic" value="/gate_center_world"/>
+        <param name="waypoint_topic" value="/waypoints"/>
+        <param name="edited_gps_topic" value="/airsim_node/drone_1/edited_gps"/>
+
+        <!-- 稳定判定 -->
+        <param name="stable_count_threshold" value="5"/>
+        <param name="stable_dist_threshold" value="1.0"/>
+
+        <!-- waypoint 周期发布 -->
+        <param name="waypoint_publish_period" value="20.0"/>
+
+        <!-- approach 点 -->
+        <param name="use_approach_point" value="false"/>
+        <param name="approach_offset_x" value="0.0"/>
+        <param name="approach_offset_y" value="0.0"/>
+        <param name="approach_offset_z" value="0.0"/>
+
+        <!-- 坐标修正 -->
+        <param name="flip_y" value="true"/>
+        <param name="flip_z" value="true"/>
+        <param name="coord_fix_x" value="0.0"/>
+        <param name="coord_fix_y" value="0.0"/>
+        <param name="coord_fix_z" value="0.0"/>
+
+        <param name="publish_waypoint_once" value="false"/>
+    </node>
+
+</launch>
